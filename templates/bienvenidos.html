@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+<head>
+   
+    <title>este es el titulo</title>
+   
+</head>
+<body>
+ <!--   <h1>bienvendios    </h1>
+    <section>
+        {% for elemento in articulos %}
+            <article>
+                <h3>{{ elemento.nombre }}</h3>
+                <p>
+                    {{ elemento.contenido }}
+                </p>    
+                 <img src="{{ elemento.imagen }}">
+           
+                <footer>
+                
+                        Autor: {{ elemento.autor }}
+                     
+                </footer>
+            </article>
+        {% endfor %}   
+    </section>
+--> 
+    <section>
+        ><form action="" method="post">
+            {% csrf_token %}
+            <h2>Envianos tus comentarios</h2>
+            
+
+             
+             <h2>gracias por el mensaje</h2>
+                {{ form }}
+          
+                 <input type="submit" name="enviar" value="Enviar comentario ">
+            {% if mensaje %}
+                <h2>{{ mensaje}}</h2>
+            {% endif %}
+        </form>
+    </section>
+</body>
+
+</html>

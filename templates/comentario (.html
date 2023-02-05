@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+<section>
+    ><form action="" method="post">
+        {% csrf_token %}
+        <h2>Envianos tus comentarios</h2>
+
+
+
+        <h2>gracias por el mensaje</h2>
+        {{ form }}
+
+        <input type="submit" name="enviar" value="Enviar comentario ">
+        {% if mensaje %}
+        <h2>{{ mensaje}}</h2>
+        {% endif %}
+    </form>
+</section>
